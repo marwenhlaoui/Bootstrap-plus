@@ -1,0 +1,99 @@
+/* container */
+#container-data{
+	padding-top: 80px;
+}
+.menu-right{
+	position: fixed;
+    list-style: none;
+
+}
+.menu-right li{
+    margin-top: -2px;
+}
+.menu-right li a{
+	padding: 5px;
+    padding-left: 10px;
+    border-left: 5px solid #eaeaea;
+    font-size: 1.2em;
+    color: silver;
+}
+.menu-right li a:hover{
+	 text-decoration: none;
+	 border-left: 5px solid silver;
+	 color: #757575;
+    cursor: pointer;
+}
+section h2{
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+    padding-top: 45px;
+}
+/* show code */
+.showcode {
+    margin: 10px 0;
+}
+.showcode .code{
+    position: absolute;
+    right: 0;
+    background-color: #757575;
+    color: white;
+    padding: 2px 1%;
+    font-size: 1.5em;
+    border-radius: 0 0 0 30%;
+    cursor: pointer;
+    border: 1px solid;
+    display: none;
+    z-index: 999;
+}
+.showcode .code:hover{ 
+    color: #757575;
+    background-color: white; 
+}
+.showcode:hover .code{
+	display: block!important;
+}
+pre.code{
+	display: block;
+    padding: 0;
+    margin: 0px;
+    font-size: 13px;
+    line-height: 1.6;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #f5f5f5;
+    background-color: #444444;
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    margin-top: -30px;
+}
+pre.code::nth-line(n)::before {
+  content: counter(line) ". ";
+  color: red;
+}
+/* footer */
+footer{
+	    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #eaeaea;
+}
+footer .ion-ios-heart{
+	color: red;
+}
+
+/* go to top page */
+.go-top{
+	display: none;
+	position: fixed;
+    bottom: 0;
+    right: 5%;
+    font-size: 2em;
+    padding: 7px 10px;
+    border: 2px solid;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.go-top:hover{ 
+    opacity: 1;
+}
