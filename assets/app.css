@@ -2,13 +2,17 @@
 #container-data{
 	padding-top: 80px;
 }
+.menu-right > li.active > a, .menu-right > li.active > a:hover, .menu-right > li.active > a:focus {
+    color: #bbbbbb;
+    background-color: #eeeeee;
+}
 .menu-right{
 	position: fixed;
     list-style: none;
 
 }
 .menu-right li{
-    margin-top: -2px;
+    margin-top: -2px!important;
 }
 .menu-right li a{
 	padding: 5px;
@@ -35,14 +39,15 @@ section h2{
 }
 .showcode .code{
     position: absolute;
-    right: 0;
-    background-color: #757575;
-    color: white;
+    right: 1%;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #f5f5f5;
     padding: 2px 1%;
     font-size: 1.5em;
-    border-radius: 0 0 0 30%;
+    border-radius: 0 0 0 20%;
     cursor: pointer;
-    border: 1px solid;
+    border: 0px solid;
     display: none;
     z-index: 999;
 }
@@ -53,16 +58,25 @@ section h2{
 .showcode:hover .code{
 	display: block!important;
 }
+
+.code{
+    margin-top: 5px;
+    background-color: #eeeeee;
+    padding: 1% 5%;
+    color: #e51c23;
+    border-left: 3px solid #e51c23;
+    font-family: monospace;
+}
 pre.code{
-	display: block;
-    padding: 0;
+    display: block;
+    padding: 10px 3%;
     margin: 0px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.6;
     word-break: break-all;
     word-wrap: break-word;
-    color: #f5f5f5;
-    background-color: #444444;
+    color: #666666;
+    background-color: #eeeeee;
     border: 2px solid #cccccc;
     border-radius: 3px;
     margin-top: -30px;
@@ -84,8 +98,8 @@ footer .ion-ios-heart{
 
 /* go to top page */
 .go-top{
-	display: none;
-	position: fixed;
+    display: none;
+    position: fixed;
     bottom: 0;
     right: 5%;
     font-size: 2em;
@@ -93,7 +107,16 @@ footer .ion-ios-heart{
     border: 2px solid;
     cursor: pointer;
     opacity: 0.5;
+    background-color: white;
 }
 .go-top:hover{ 
     opacity: 1;
+}
+
+/* try modal*/ 
+.try-modal .modal{
+    display: block;
+    overflow: visible;
+    position: relative;
+    z-index: 99;
 }

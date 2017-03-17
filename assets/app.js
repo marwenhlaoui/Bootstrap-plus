@@ -21,8 +21,36 @@ $(document).ready(function() {
         	var code = $(this).parent().find('.code-data').html(); 
         	var item = $('#showcode'); 
         	item.find('.modal-body').html("<pre class='code'></pre>");
-        	item.find('.modal-body pre').text(code);
+        	item.find('.modal-body pre').text(cleanSource(code));
         	item.modal('show');
         }); 
+
+         function cleanSource(html) {
+            html = html.replace(/×/g, "&times;")
+                       .replace(/«/g, "&laquo;")
+                       .replace(/»/g, "&raquo;")
+                       .replace(/←/g, "&larr;")
+                       .replace(/→/g, "&rarr;");
+
+            var lines = html.split(/\n/);
+
+            lines.shift();
+            lines.splice(-1, 1);
+
+            var indentSize = lines[0].length - lines[0].trim().length,
+                re = new RegExp(" {" + indentSize + "}");
+
+            lines = lines.map(function(line){
+              if (line.match(re)) {
+                line = line.substring(indentSize);
+              }
+
+              return line;
+            });
+
+            lines = lines.join("\n");
+
+            return lines;
+          }
 
 });
